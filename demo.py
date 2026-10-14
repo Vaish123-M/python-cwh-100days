@@ -1,7 +1,5 @@
-print("Python is running!")
-
-first_number = 5
-second_number = 3
-total = first_number + second_number
-
-print("5 + 3 =", total)
+string = "15"
+number = 7
+string_number = int(string)
+sum = number + string_number
+print("The sum of both the numbers is :", sum)
