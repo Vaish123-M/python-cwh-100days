@@ -10,12 +10,16 @@ Remember that `bool("")`, `bool(0)`, `bool([])`, and `bool(None)` are False;
 most other non-empty/non-zero values are True.
 """
 
-text_number = "15"
-integer_number = int(text_number)
-decimal_number = float(text_number)
-print("Integer:", integer_number, type(integer_number).__name__)
-print("Float:", decimal_number, type(decimal_number).__name__)
-print("Text:", str(integer_number), type(str(integer_number)).__name__)
+text_number = input("Enter a number: ").strip()
+try:
+    integer_number = int(text_number)
+    decimal_number = float(text_number)
+except ValueError:
+    print("Enter a valid whole or decimal number.")
+else:
+    print("Integer:", integer_number, type(integer_number).__name__)
+    print("Float:", decimal_number, type(decimal_number).__name__)
+    print("Text:", str(integer_number), type(str(integer_number)).__name__)
 
 # Convert a string of characters into a list of individual characters.
 print("Characters:", list("cat"))
@@ -26,7 +30,7 @@ print("bool(0):", bool(0))
 print("bool('False'):", bool("False"))  # Non-empty text is True.
 
 # Edge case: catch invalid external text instead of crashing unexpectedly.
-user_text = "12.5"
+user_text = input("Enter text to convert to an integer: ").strip()
 try:
     print(int(user_text))
 except ValueError:

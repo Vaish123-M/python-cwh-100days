@@ -16,7 +16,7 @@ for number in range(1, 8):
     print("Odd number:", number)
 
 # Stop searching once the target is found.
-target = 5
+target = int(input("Enter a number to find from 1 to 9: "))
 for number in range(1, 10):
     if number == target:
         print("Found:", target)

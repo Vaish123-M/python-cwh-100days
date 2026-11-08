@@ -42,7 +42,7 @@ def decode_message(message):
     return " ".join(decode_word(word) for word in message.split())
 
 
-message = "this is a secret"
+message = input("Enter a message to encode: ")
 encoded = encode_message(message)
 print("Encoded:", encoded)
 print("Decoded:", decode_message(encoded))

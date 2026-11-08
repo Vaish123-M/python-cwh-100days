@@ -10,15 +10,18 @@ Use `for` when iterating over a known sequence and `while` when repetition
 depends on a condition or an event.
 """
 
+maximum_attempts = int(input("Enter the maximum number of attempts: "))
 attempt = 1
-while attempt <= 3:
+while attempt <= maximum_attempts:
     print("Attempt:", attempt)
     attempt += 1  # Progress prevents an infinite loop.
 else:
     print("All attempts completed.")
 
 # A sentinel value controls when input-like processing ends.
-pending = ["task A", "task B"]
+pending = [task.strip() for task in input(
+    "Enter tasks separated by commas: "
+).split(",") if task.strip()]
 while pending:
     task = pending.pop(0)
     print("Processing:", task)

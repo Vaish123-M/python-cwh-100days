@@ -9,7 +9,9 @@ convert it back.
 Slicing follows `[start:stop:step]`, with an exclusive stop index.
 """
 
-numbers = (1, 2, 3, 2)
+numbers = tuple(map(int, input(
+    "Enter tuple numbers separated by spaces: "
+).split()))
 print("Slice:", numbers[1:3])
 print("Reversed:", numbers[::-1])
 print("Concatenated:", numbers + (4, 5))

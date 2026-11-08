@@ -21,13 +21,14 @@ def withdraw(balance, amount):
     return balance - amount
 
 
-for balance, amount in ((100, 30), (100, 150), (100, 0)):
-    try:
-        print("Remaining balance:", withdraw(balance, amount))
-    except InsufficientBalanceError as error:
-        print("Withdrawal declined:", error)
-    except ValueError as error:
-        print("Invalid withdrawal:", error)
+balance = float(input("Enter the account balance: "))
+amount = float(input("Enter the withdrawal amount: "))
+try:
+    print("Remaining balance:", withdraw(balance, amount))
+except InsufficientBalanceError as error:
+    print("Withdrawal declined:", error)
+except ValueError as error:
+    print("Invalid withdrawal:", error)
 
 # Re-raise an exception when the caller should decide how to handle it.
 def require_non_empty(text):
@@ -39,4 +40,4 @@ def require_non_empty(text):
     return text
 
 
-print("Validated text:", require_non_empty("Python"))
+print("Validated text:", require_non_empty(input("Enter non-empty text: ")))

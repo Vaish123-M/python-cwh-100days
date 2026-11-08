@@ -9,7 +9,9 @@ trailing comma: `(42,)`; `(42)` is just an integer in parentheses.
 Tuples are useful for fixed records and unpacking multiple returned values.
 """
 
-coordinates = (10, 20)
+coordinates = tuple(map(int, input(
+    "Enter two coordinates separated by a space: "
+).split()))
 mixed_tuple = ("Mina", 21, True)
 single_item = (42,)
 not_a_tuple = (42)

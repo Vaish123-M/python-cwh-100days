@@ -17,12 +17,17 @@ def divide(left, right):
     return None
 
 
-print("10 / 2 =", divide(10, 2))
-print("10 / 0 =", divide(10, 0))
-print("10 / text =", divide(10, "text"))
+left = float(input("Enter the dividend: "))
+right = input("Enter the divisor: ")
+try:
+    right = float(right)
+except ValueError:
+    print("The divisor is not a number.")
+else:
+    print("Result:", divide(left, right))
 
 # Convert user-like text while handling only the expected conversion error.
-for text in ("42", "not a number"):
+for text in (input("Enter an integer: "),):
     try:
         number = int(text)
     except ValueError:
@@ -31,7 +36,7 @@ for text in ("42", "not a number"):
         print("Parsed integer:", number)
 
 # The `else` block runs only when the try block succeeds.
-scores = {"Mina": 95}
+scores = {"Mina": int(input("Enter Mina's score: "))}
 try:
     print("Mina's score:", scores["Mina"])
     print("Asha's score:", scores["Asha"])

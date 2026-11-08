@@ -26,15 +26,15 @@ def calculate(first_number, second_number):
     }
 
 
-results = calculate(50, 3)
-for operation, result in results.items():
-    print(f"{operation.title()}: {result}")
-
-# Edge case: handle the expected error explicitly at the call site.
 try:
-    calculate(10, 0)
+    first_number = float(input("Enter the first number: "))
+    second_number = float(input("Enter the second number: "))
+    results = calculate(first_number, second_number)
 except ValueError as error:
     print("Calculator error:", error)
+else:
+    for operation, result in results.items():
+        print(f"{operation.title()}: {result}")
 
 # Negative floor division rounds down, rather than truncating toward zero.
 print("Negative floor division:", calculate(-7, 2)["floor division"])

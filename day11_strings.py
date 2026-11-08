@@ -27,7 +27,7 @@ print(windows_path)
 
 # Strings behave like sequences: indexes start at zero and iteration visits
 # one character at a time.
-word = "Python"
+word = input("Enter a word: ")
 print("First character:", word[0])
 for character in word:
     print(character, end="|")

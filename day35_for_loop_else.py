@@ -7,7 +7,7 @@ searches: the loop can break when it finds a match, and `else` handles the
 case where no match was found.
 """
 
-target = 7
+target = int(input("Enter a number to search for from 1 to 10: "))
 for number in range(1, 11):
     if number == target:
         print("Found:", target)

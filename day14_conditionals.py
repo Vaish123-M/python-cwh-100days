@@ -11,7 +11,7 @@ Logical operators are `and`, `or`, and `not`.  Comparisons can be chained,
 such as `0 <= score <= 100`.
 """
 
-score = 87
+score = float(input("Enter a score: "))
 if score >= 90:
     grade = "A"
 elif score >= 80:
@@ -21,8 +21,8 @@ else:
 print("Grade:", grade)
 
 # Conditions can combine comparisons with logical operators.
-age = 20
-has_id = True
+age = int(input("Enter your age: "))
+has_id = input("Do you have an ID? (yes/no): ").strip().lower() == "yes"
 if age >= 18 and has_id:
     print("Entry permitted.")
 else:
@@ -39,7 +39,7 @@ if not []:
 # if score = 100:  # SyntaxError.
 
 # Edge case: validate a bounded value before categorizing it.
-percentage = 105
+percentage = float(input("Enter a percentage: "))
 if not 0 <= percentage <= 100:
     print("Percentage is outside the valid range.")
 elif percentage >= 50:

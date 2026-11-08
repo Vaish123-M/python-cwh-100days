@@ -34,7 +34,9 @@ print("Total:", total_cost(10, 5, tax_rate=0.1))
 show_settings(theme="dark", notifications=True)
 
 # A list or tuple can be unpacked into positional arguments with *.
-prices = [3, 7, 2]
+prices = [float(price) for price in input(
+    "Enter prices separated by spaces: "
+).split()]
 print("Unpacked total:", total_cost(*prices))
 
 # A dictionary can be unpacked into keyword arguments with **.

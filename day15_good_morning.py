@@ -23,16 +23,8 @@ def greeting_for_hour(hour):
     return "Good evening!"
 
 
-# Use fixed examples first so each branch is visible and predictable.
-for example_hour in (8, 14, 20):
-    print(example_hour, "->", greeting_for_hour(example_hour))
-
-# `localtime()` uses the machine's local timezone.
-current_hour = time.localtime().tm_hour
-print("Current local greeting:", greeting_for_hour(current_hour))
-
-# Edge case: invalid hours are rejected rather than silently misclassified.
 try:
-    greeting_for_hour(24)
+    hour = int(input("Enter the current hour (0-23): ").strip())
+    print(greeting_for_hour(hour))
 except ValueError as error:
-    print("Time validation:", error)
+    print("Please enter a whole number from 0 to 23:", error)

@@ -9,7 +9,7 @@ Positive indexes count from the left; negative indexes count from the right.
 its bounds extend beyond the string, but a step of zero is invalid.
 """
 
-text = "Python programming"
+text = input("Enter some text: ")
 print("Length:", len(text))
 print("First character:", text[0])
 print("Last character:", text[-1])

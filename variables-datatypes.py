@@ -1,7 +1,7 @@
-a = 1
-b = True
-c = 3.14
-d = "Hello, World!" 
+a = int(input("Enter a whole number: "))
+b = input("Enter True or False: ").strip().lower() == "true"
+c = float(input("Enter a decimal number: "))
+d = input("Enter some text: ")
 print(a)
 print(b)
 print(c)

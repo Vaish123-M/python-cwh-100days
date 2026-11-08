@@ -9,7 +9,9 @@ Lists can be changed after creation, unlike strings and tuples.  A list
 stores references to objects, so copying and aliasing should be understood.
 """
 
-shopping = ["rice", "tea", "apples"]
+shopping = [item.strip() for item in input(
+    "Enter shopping items separated by commas: "
+).split(",") if item.strip()]
 mixed = ["text", 42, True]
 print("Shopping:", shopping)
 print("Mixed values:", mixed)

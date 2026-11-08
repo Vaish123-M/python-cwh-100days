@@ -21,16 +21,8 @@ def get_greeting(hour):
     return "Good evening, sir!"
 
 
-# Test every decision branch with fixed values.
-for hour in (7, 13, 19):
-    print(f"{hour:02d}:00 -> {get_greeting(hour)}")
-
-# Use the actual local system timestamp for the live greeting.
-now = time.localtime()
-print("Live greeting:", get_greeting(now.tm_hour))
-
-# Invalid timestamps are reported explicitly.
 try:
-    get_greeting(-1)
+    hour = int(input("Enter the current hour (0-23): ").strip())
+    print(get_greeting(hour))
 except ValueError as error:
-    print("Invalid hour:", error)
+    print("Please enter a whole number from 0 to 23:", error)

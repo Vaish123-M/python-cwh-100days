@@ -10,9 +10,9 @@ Use descriptive `snake_case` names, constants in `UPPER_CASE`, and avoid
 shadowing built-ins such as `sum` or `list`.
 """
 
-student_name = "Mina"
-age = 20
-is_enrolled = True
+student_name = input("Enter the student's name: ").strip()
+age = int(input("Enter the student's age: "))
+is_enrolled = input("Is the student enrolled? (yes/no): ").strip().lower() == "yes"
 print(student_name, age, is_enrolled)
 
 # Assignment evaluates the right side first, then binds the name.
@@ -20,7 +20,8 @@ next_age = age + 1
 print("Next age:", next_age)
 
 # Several names can be assigned at once when the number of values matches.
-width, height = 8, 5
+width = float(input("Enter the width: "))
+height = float(input("Enter the height: "))
 area = width * height
 print("Area:", area)
 

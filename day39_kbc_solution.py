@@ -3,8 +3,7 @@
 
 This clean KBC solution stores each question, options, answer, and prize in
 one tuple.  The game stops at the first incorrect answer and returns the
-player's winnings.  Prepared answers keep this example runnable without
-interactive input.
+player's winnings.  Answers are read interactively with `input()`.
 """
 
 QUESTIONS = (
@@ -29,14 +28,13 @@ QUESTIONS = (
 )
 
 
-def play_quiz_with_answers(answers):
-    """Run a quiz using a fresh iterator for each question."""
-    answer_stream = iter(answers)
+def play_quiz():
+    """Run the interactive quiz."""
     winnings = 0
     for question, options, correct_answer, prize in QUESTIONS:
         print("\n" + question)
         print(" | ".join(options))
-        answer = next(answer_stream, "").strip().upper()
+        answer = input("Your answer (A-D): ").strip().upper()
         if answer != correct_answer:
             print("Incorrect. The correct answer was", correct_answer)
             break
@@ -45,5 +43,4 @@ def play_quiz_with_answers(answers):
     return winnings
 
 
-print("Final prize:", play_quiz_with_answers(["b", "B", "A"]))
-print("Prize after wrong answer:", play_quiz_with_answers(["B", "C", "A"]))
+print("Final prize:", play_quiz())

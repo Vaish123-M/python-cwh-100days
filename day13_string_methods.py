@@ -10,7 +10,7 @@ Methods are called with dot notation and parentheses, for example
 `text.upper()`.  Most methods are case-sensitive unless documented otherwise.
 """
 
-messy_text = "  hello, python world  "
+messy_text = input("Enter text with optional spaces: ")
 print("Upper:", messy_text.upper())
 print("Lower:", messy_text.lower())
 print("Capitalized:", messy_text.strip().capitalize())
@@ -26,7 +26,7 @@ print("Words:", words)
 print("Joined:", " | ".join(words))
 
 # find() returns the first index, or -1 when the substring is absent.
-sentence = "Python is readable"
+sentence = input("Enter a sentence: ")
 print("Index of 'read':", sentence.find("read"))
 print("Missing index:", sentence.find("Java"))
 print("Ends with 'able':", sentence.endswith("able"))

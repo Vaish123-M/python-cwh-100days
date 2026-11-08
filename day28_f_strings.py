@@ -10,9 +10,9 @@ F-strings are usually clearer than manual string concatenation and preserve
 the original value's type while formatting its text representation.
 """
 
-name = "Asha"
-items = 3
-price = 19.995
+name = input("Enter your name: ")
+items = int(input("Enter the number of items: "))
+price = float(input("Enter the price: "))
 
 print(f"Hello, {name}!")
 print(f"{name} bought {items} items.")
@@ -21,7 +21,8 @@ print(f"Large number: {1234567:,}")
 print(f"Aligned: {'Python':>10}")
 
 # Expressions can appear inside braces.
-width, height = 8, 5
+width = float(input("Enter the width: "))
+height = float(input("Enter the height: "))
 print(f"Area of {width} x {height}: {width * height}")
 
 # Dates and numbers can be formatted with explicit specifiers.

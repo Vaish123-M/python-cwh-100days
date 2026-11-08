@@ -7,7 +7,9 @@ methods include `append()`, `insert()`, `sort()`, `reverse()`, `index()`,
 their result when you want to keep the list.
 """
 
-numbers = [3, 1, 2, 1]
+numbers = [int(number) for number in input(
+    "Enter numbers separated by spaces: "
+).split()]
 numbers.append(5)
 numbers.insert(1, 9)
 print("After append and insert:", numbers)

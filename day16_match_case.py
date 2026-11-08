@@ -10,7 +10,7 @@ Unlike `if`, `match` compares a subject against patterns.  The optional
 `case pattern if guard` adds an extra Boolean condition.
 """
 
-command = "start"
+command = input("Enter a command (start/stop/restart): ").strip().lower()
 match command:
     case "start":
         print("Starting the service.")
@@ -22,7 +22,7 @@ match command:
         print("Unknown command.")
 
 # Multiple alternatives can share one case with `|`.
-status_code = 404
+status_code = int(input("Enter an HTTP status code: "))
 match status_code:
     case 200 | 201:
         print("Successful response.")
@@ -34,7 +34,7 @@ match status_code:
         print("Other response.")
 
 # Patterns can unpack a sequence and bind names.
-point = (0, 7)
+point = tuple(map(int, input("Enter x and y coordinates separated by a space: ").split()))
 match point:
     case (0, y):
         print("Point lies on the y-axis at", y)

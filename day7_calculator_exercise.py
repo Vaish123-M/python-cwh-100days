@@ -9,8 +9,8 @@ This first version focuses on translating an exercise into expressions.
 The next lesson adds a reusable solution with validation.
 """
 
-first_number = 50
-second_number = 3
+first_number = float(input("Enter the first number: "))
+second_number = float(input("Enter the second number: "))
 
 # Each expression is evaluated before print displays its label and result.
 print("Addition:", first_number + second_number)
@@ -26,6 +26,5 @@ print("Exponentiation:", first_number ** second_number)
 print("Grouped expression:", (first_number + second_number) * 2)
 
 # Edge case: the divisor must not be zero for /, //, or %.
-safe_divisor = 0
-if safe_divisor == 0:
+if second_number == 0:
     print("Cannot divide by zero.")

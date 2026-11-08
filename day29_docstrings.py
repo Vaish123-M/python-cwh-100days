@@ -39,11 +39,12 @@ class Course:
         self.lessons = lessons
 
 
+minutes = int(input("Enter minutes to convert: "))
 print("Function documentation:\n", convert_minutes.__doc__)
 print("Class documentation:", Course.__doc__)
 course = Course("Python", 30)
 print(course.title, course.lessons)
-print("Conversion:", convert_minutes(125))
+print("Conversion:", convert_minutes(minutes))
 
 # Edge case: malformed input is rejected by the function's documented rule.
 try:

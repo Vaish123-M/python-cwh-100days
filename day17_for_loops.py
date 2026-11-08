@@ -10,10 +10,11 @@ Use `enumerate()` when both an index and item are needed.  A loop can have an
 `else` clause that runs when it finishes normally, not when it uses `break`.
 """
 
-for character in "cat":
+for character in input("Enter text to iterate over: "):
     print("Character:", character)
 
-for number in range(1, 5):
+stop = int(input("Count up to (exclusive): "))
+for number in range(1, stop):
     print("Number:", number)
 
 # Start and step make a countdown possible.
@@ -26,7 +27,7 @@ for index, fruit in enumerate(["apple", "banana"], start=1):
 
 # A loop can accumulate a result.
 total = 0
-for number in range(1, 6):
+for number in range(1, stop):
     total += number
 print("Total:", total)
 
